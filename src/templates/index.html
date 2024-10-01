@@ -1,0 +1,41 @@
+<title>Iris Predict App</title>
+<style>
+#wrapper{
+    text-align: center;
+}
+</style>
+
+<div id="wrapper">
+    <h1>がくと花弁の長さ・幅を入力して、<br>
+        あやめの花の種類を判定しよう</h1>
+    <form method="post">
+        {{ forms.scrf_token }}
+
+        {{ forms.SepalLength.label }}<br>
+        {{ forms.SepalLength }}<br>
+        {% for error in forms.SepalLength.errors %}
+        <div>{{ error }}/div>
+        {% endfor %}<br>
+
+        {{ forms.SepalWidth.label }}<br>
+        {{ forms.SepalWidth }}<br>
+        {% for error in forms.SepalWidth.errors %}
+        <div>{{ error }}/div>
+        {% endfor %}<br>
+
+        {{ forms.PetalLength.label }}<br>
+        {{ forms.PetalLength }}<br>
+        {% for error in forms.PetalLength.errors %}
+        <div>{{ error }}/div>
+        {% endfor %}<br>
+
+        {{ forms.PetalWidth.label }}<br>
+        {{ forms.PetalWidth }}<br>
+        {% for error in forms.PetalWidth.errors %}
+        <div>{{ error }}/div>
+        {% endfor %}<br>
+
+        {{ forms.submit }}
+    </form>
+
+</div>
